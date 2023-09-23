@@ -1,0 +1,42 @@
+ #include<iostream>
+using namespace std ;
+
+class student
+{
+public :
+	string name ;
+	int id ;
+	double gpa ;
+};
+int main()
+{
+	student ab1 ;
+	ab1.name = "topu" ;
+	ab1.gpa = 33.00 ;
+	ab1.id = 110 ;
+	cout<<"name: " <<ab1.name <<endl ;
+	cout<<"gpa" <<ab1.gpa <<endl ;
+	cout<<"id :" <<ab1.gpa <<endl ;
+
+	cout<<endl ;
+
+	student ab2 ;
+	ab2.name = "rohim" ;
+	ab2.gpa = 4.00 ;
+	ab2.id = 122 ;
+	cout<<"name:" <<ab2.name <<endl ;
+	cout<<"gpa:" <<ab2.gpa <<endl ;
+	cout<<"id:" <<ab2.id <<endl ;
+
+	cout<<endl ;
+
+	student ab3 ;
+	ab3.name = "rakib" ;
+	ab3.gpa = 2.00 ;
+	ab3.name = 1706 ;
+	cout<<"name" <<ab3.name<<endl ;
+	cout<<"gpa" <<ab3.gpa<<endl ;
+	cout<<"id" <<ab3.id<<endl ;
+
+	return 0 ;
+}

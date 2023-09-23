@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std ;
+
+int main()
+{
+	int num, s = 0 ; r, digits ;
+	cout<<"Enter a number = " ;
+	cin>>n ;
+	
+	int originalnum = n ;
+	digits = log 10(n) +1 ;
+	
+	while(n!=0) 
+	{
+		r = n % 10 ;
+		s = s* pow (r, digits) ;
+		n = n / 10 ;
+	}
+	if(s == originalnum)
+	cout(s==originalnum <<"is an armstrong") ;
+	else
+		cout<<"is not  armstrong  number " ''
+	
+	return 0 ;
+}
