@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Postbook</h1>
+
+    <div class="login_form">
+        <h3>please login</h3>
+        <form>
+            <input type="text" id="user_id" name="user+_id" placeholder="User Id" />
+            <input type="password" id="password" placeholder="Password" />
+        </form>
+        <button onclick="handleLogin()" class="login_btn">Log in</button>
+
+
+        <div class="froget_pass">
+            <span><a href="">Forgotten password?</a></span>
+            <hr>
+        </div>
+
+        <div class="create_account">
+            <h2>Create new account</h2>
+        </div>
+
+    </div>
+
+   
+
+    <!-- error message -->
+
+    <div id="user_login_error" class="error hidden">
+        <h3>User Id not found or password is wrong! please try again</h3>
+    </div>
+
+    <script src="./login.js"></script>
+</body>
+</html>

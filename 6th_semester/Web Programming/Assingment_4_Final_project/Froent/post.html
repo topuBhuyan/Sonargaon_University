@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./postStyle.css">
+</head>
+
+<body onload="checkLoggedInUser()">
+
+    <header>
+        <div class="header">
+            <h3>Hello <span id="logged_username">Users</span> &#128075;</h3>
+            <button onclick="logOut()" class="logOutbtn">Logout</button>
+        </div>
+    </header>
+
+    <section id="added_post_container">
+        <article>
+            <h2>Add new post</h2>
+
+            <div>
+                <textarea name="" id="newPost_text" placeholder="What's on your mind, Topu?"></textarea>
+            </div>
+
+            <div>
+                <input type="text" id="newPost_img" placeholder="Enter Image URL">
+            </div>
+
+            <div>
+                <button onclick="handleAddNewPost()" class="addPoat_btn">Post</button>
+            </div>
+        </article>
+
+    </section>
+
+    <section id="post_container">
+        <!-- post -->
+        <div class="post">
+            <div class="post_header">
+                <div class="post_user_img">
+                    <img src="./me.jpg" alt="">
+                </div>
+
+                <div class="post_username_time">
+                    <p class="post_username">username</p>
+                    <div class="posted_time">
+                        <span>13</span>
+                        <span>hours ago</span>
+                    </div>
+                </div>
+       <!-- Update And Delte -->
+                <div class="update_delete">
+                    <div class="update">
+                        <button>Update</button>
+                    </div>
+                    <div class="delete">
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+         
+
+            <div class="post_text">
+                <p class="post_text_content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi modi
+                    repellendus earum eius quis quibusdam a illo deserunt totam ducimus?</p>
+            </div>
+
+            <div class="post_img">
+                <img src="./group.jpg" alt="post_img">
+            </div>
+
+            <!-- comments under a single post -->
+
+            <div class="comments_holder">
+                <div class="comment">
+                    <div class="comment_user_img">
+                        <img src="./me.jpg" alt="">
+                    </div>
+
+                    <div class="comment_text_container">
+                        <h4>Commented UserName</h4>
+                        <p class="comments_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment_user_img">
+                        <img src="./me.jpg" alt="">
+                    </div>
+
+                    <div class="comment_text_container">
+                        <h4>Commented UserName</h4>
+                        <p class="comments_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment_user_img">
+                        <img src="./me.jpg" alt="">
+                    </div>
+
+                    <div class="comment_text_container">
+                        <h4>Commented UserName</h4>
+                        <p class="comments_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- new comment input filed -->
+            <div class="postComment_holder">
+                <div class="post_comment_input_field_holder">
+                    <input type="text" placeholder="post your Comment" class="post_comment_input_field"
+                        id="postComment_input_for_postId1" />
+                </div>
+                <div class="comment_btn_holder">
+                    <button class="Post_comment_button" id="comment_btn">Comment</i></button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- post -->
+        <div class="post">
+            <div class="post_header">
+                <div class="post_user_img">
+                    <img src="./me.jpg" alt="">
+                </div>
+
+                <div class="post_username_time">
+                    <p class="post_username">username</p>
+                    <div class="posted_time">
+                        <span>13</span>
+                        <span>hours ago</span>
+                    </div>
+                </div>
+
+                <div class="update_delete">
+                    <div class="update">
+                        <button>Update</button>
+                    </div>
+                    <div class="delete">
+                        <button>Delete</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="post_text">
+                <p class="post_text_content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi modi
+                    repellendus earum eius quis quibusdam a illo deserunt totam ducimus?</p>
+            </div>
+
+            <div class="post_img">
+                <img src="./group.jpg" alt="post_img">
+            </div>
+
+            <!-- comments under a single post -->
+
+            <div class="comments_holder">
+                <div class="comment">
+                    <div class="comment_user_img">
+                        <img src="./me.jpg" alt="">
+                    </div>
+
+                    <div class="comment_text_container">
+                        <h4>Commented UserName</h4>
+                        <p class="comments_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment_user_img">
+                        <img src="./me.jpg" alt="">
+                    </div>
+
+                    <div class="comment_text_container">
+                        <h4>Commented UserName</h4>
+                        <p class="comments_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment_user_img">
+                        <img src="./me.jpg" alt="">
+                    </div>
+
+                    <div class="comment_text_container">
+                        <h4>Commented UserName</h4>
+                        <p class="comments_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- new comment input filed -->
+            <div class="postComment_holder">
+                <div class="post_comment_input_field_holder">
+                    <input type="text" placeholder="post your Comment" class="post_comment_input_field"
+                        id="postComment_input_for_postId1" />
+                </div>
+                <div class="comment_btn_holder">
+                    <button class="Post_comment_button" id="comment_btn">Comment</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- post -->
+        <div class="post">
+            <div class="post_header">
+                <div class="post_user_img">
+                    <img src="./me.jpg" alt="">
+                </div>
+
+                <div class="post_username_time">
+                    <p class="post_username">username</p>
+                    <div class="posted_time">
+                        <span>13</span>
+                        <span>hours ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post_text">
+                <p class="post_text_content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi modi
+                    repellendus earum eius quis quibusdam a illo deserunt totam ducimus?</p>
+            </div>
+
+            <div class="post_img">
+                <img src="./group.jpg" alt="post_img">
+            </div>
+
+            <!-- comments under a single post -->
+
+            <div class="comments_holder">
+                <div class="comment">
+                    <div class="comment_user_img">
+                        <img src="./me.jpg" alt="">
+                    </div>
+
+                    <div class="comment_text_container">
+                        <h4>Commented UserName</h4>
+                        <p class="comments_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment_user_img">
+                        <img src="./me.jpg" alt="">
+                    </div>
+
+                    <div class="comment_text_container">
+                        <h4>Commented UserName</h4>
+                        <p class="comments_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment_user_img">
+                        <img src="./me.jpg" alt="">
+                    </div>
+
+                    <div class="comment_text_container">
+                        <h4>Commented UserName</h4>
+                        <p class="comments_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- new comment input filed -->
+            <div class="postComment_holder">
+                <div class="post_comment_input_field_holder">
+                    <input type="text" placeholder="post your Comment" class="post_comment_input_field"
+                        id="postComment_input_for_postId1" />
+                </div>
+                <div class="comment_btn_holder">
+                    <button class="Post_comment_button" id="comment_btn">Comment</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <script src="./utils/calculateTimeDifference.js"></script>
+    <script src="./fetchData.js"></script>
+</body>
+
+</html>
