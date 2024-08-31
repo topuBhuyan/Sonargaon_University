@@ -1,0 +1,96 @@
+* {
+    font-family: "Karla", sans-serif;
+  }
+body{
+    background-color: #F2F4F7;
+}
+h1{
+    color: #2176FF;
+    margin-left: 50px;
+}
+.login_form{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin-top: 120px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+#user_id{
+    font-size: 16px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#password{
+    font-size: 16px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 15px;
+    
+}
+.login_form h3{
+    text-align: center;
+    color: black;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+}
+.login_btn {
+    margin-top: 60px;
+    background-color: #2176FF;
+    color: rgb(255, 255, 255);
+    width: 350px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.froget_pass, span a{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #2176FF;
+}
+hr{
+    color: gray;
+
+}
+ .create_account{
+    margin-top: 200px;
+    background-color: #36A420;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 50px;
+    padding: 2px;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    margin: 0 auto;
+
+}
+
+.error{
+    color: red;
+}
+.error h3 {
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
